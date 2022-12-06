@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Poppins:wght@300;400;600&family=Roboto+Mono&family=Tiro+Devanagari+Hindi&display=swap');
+// bootstrap
+$theme-colors: (
+    "primary":#360800
+);
+html {
+    scroll-behavior: smooth;
+}
+
+@import "../bootstrap-5.2.0-beta1/scss/bootstrap.scss";
+
+//css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+.div_section_ref {
+    position: relative;
+}
+.space_home_price{
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(#044c9e,#3608006b);
+}
+.space_price_history{
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(#3608006b,#fffd796b);
+}
+.space_gallery_contacts{
+    width: 100%;
+    height: 10px;
+    background-image: linear-gradient(#fffd796b,#410b00cd);
+}
+
+
+.header {
+    background: url(../images/header.jpg);
+    background-size: cover;
+    h1 {
+        font-family: 'Poppins', sans-serif;
+        font-weight: 500;
+        justify-self: center;
+        color: transparent;
+        background-image: linear-gradient(to right, #948a00, #e0c10f,#e0c10f,#f0ce11,#ffdd1f);
+        background-clip: text;
+        box-sizing: content-box;
+    }
+    p {
+        font-size: 11pt;
+        justify-self: end;
+        color: gold;
+        font-weight: 400;
+    }
+}
+
+// --- menu
+#nav_menu {
+    background-color: #4382ff;
+    font-family: 'Open Sans';
+    font-size: 30px;
+    font-weight: 300;
+    color: rgb(218, 218, 218);
+    padding: 0;
+    a {
+        color: antiquewhite;
+        margin: 10px 10px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    #home_ref {
+        font-size: 38px
+    }
+    a:hover {
+        border-bottom: 1px solid antiquewhite;
+        margin-bottom: 9px;
+    }
+}
+.navbar {
+    background-color: #490b00e4;
+    width: 100%;
+    margin: 0;
+}
+
+// --- home page
+#main_page {
+    background: url(../images/pexels-pixabay-37403.jpg);
+    background-size: cover;
+    padding: 0 15px;
+    min-height: 100vh;
+    height: fit-content;
+}
+#main_page_content {
+    box-sizing: border-box;
+    width: fit-content;
+    padding: 3%;
+    margin: 0 auto;
+    background-color: rgba(0, 9, 59, 0.459);
+    box-shadow: 0 0 15px 15px rgba(0, 9, 59, 0.459);
+    color: white;
+    h3 {
+        text-align: center;
+        padding: 20px 0;
+    }
+    .modal-body {
+        color: #360800;
+        height: 70vh;
+        iframe {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .modal-title {
+        color: #360800;
+    }
+}
+
+// --- price section
+#prices_page {
+    padding: 95px 0;
+    background-color: #3608006b;
+    min-height: 100vh;
+    height: fit-content;
+    .row {
+        max-height: fit-content;
+    }
+    .card {
+        height: 500px;
+        width: 100%;
+        padding: 0%;
+        .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+            padding: 5px;
+            table * {
+                padding: 5px 2px;
+            }
+            .btn {
+                margin: auto 5px 5px 5px;
+                justify-self: end;
+            }
+        }
+        img {
+            height: 40%;
+            width: auto;
+        }
+    }
+}
+
+// -- history section
+#history_page {
+    margin: 0;
+    padding: 20px 3%;
+    min-height: 100vh;
+    background-color: #fffd796b;
+    color: #360800;
+    img {
+        width: 100%;
+        height: auto;
+        margin: auto 0;
+    }
+    .left_text {
+        font-family: 'Roboto Mono';
+        text-align: justify;
+    }
+    .right_text {
+        font-family: 'Tiro Devanagari Hindi';
+        text-align: justify;
+    }
+    h3 {
+        font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+    }
+    h4 {
+        font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
+
+// --- gallery section
+#gallery_page {
+    padding: 100px 0;
+    min-height: 100vh;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background-color: #fffd796b;
+    #carouselExampleCaptions {
+        width: 90%;
+        max-height: 82vh;
+        height: fit-content;
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #36080080;
+            box-shadow: 0 0 10px 10px #36080080;
+        }
+    }
+    .carousel-inner {
+        width: 100%;
+        max-height: 100%;
+        .carousel-item {
+            max-height: 100%;
+            height: fit-content;
+            width: 100%;
+            img {
+                height: auto;
+                max-width: 100%;
+                max-height: 82vh;
+            }
+            .carousel-caption {
+                padding: 0;
+                background-color: #36080080;
+                box-shadow: 0 0 10px 10px #36080080;
+            }
+        }
+    }
+}
+
+// --- contacts section (last)
+#contacts_page {
+    padding: 120px 2% 40px;
+    min-height: 100vh;
+    height: fit-content;
+    background-color: #410b00cd;
+    color: rgb(254, 225, 61);
+    display: flex;
+    align-items: flex-end;
+    a {
+        color: rgb(254, 225, 61);
+    }
+}
+#contacts_content {
+    padding: auto;
+    width: 100%;
+    margin: 0;
+}
+#refs_icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+}
+
+
+/* --- media queries --- */
+@media (max-width:767.9px) {
+    #refs_icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        width: 40%;
+    }
+    #carouselExampleCaptions {
+        margin: auto 0;
+    }
+}
+@media screen and (max-width:686px) {
+    #nav_menu {
+        font-size: 24px;
+        #home_ref {
+            font-size: 30px
+        }
+    }
+    #main_page_content {
+        width: 97%;
+    }
+    #video {
+        width: 95vw;
+    }
+}
+@media (max-width:576px) {
+    .section_ref {
+        position: absolute;
+        top: -295px;
+    }
+    #history_page {
+        padding-top: 60px;
+    }
+    #prices_page {
+        padding-top: 60px
+    }
+}
+@media screen and (max-height:580px) {
+    #carouselExampleCaptions {
+        height: 77vh;
+        width: fit-content;
+        img {
+            max-height: 100%;
+            width: auto;
+        }
+    }
+}

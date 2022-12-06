@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="scss_css/custom.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <title>Hýl - bootstrap</title>
+</head>
+
+<body>
+
+    <header class="header px-2 py-2 pt-lg-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-8 offset-lg-1 text-center d-flex justify-content-center">
+                    <h1 class="display-1">Hotel Les Créoles</h1>
+                </div>
+                <div class="d-none d-sm-block col-sm-4 col-lg-3">
+                    <p class="fs-6">
+                        GPS: -21.06665020118288,<br /> 55.2230971678836<br />
+                        Phone: +262262265265<br />
+                        Email: resa@hotellescreoles.com
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+ <!-- --- menu ---  -->
+    <div id="nav_menu" class="container-fluid d-flex sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-dark justify-content-center">
+            <span class="d-sm-none pe-3">Nabídka</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#prices_ref">Ceník</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#history_ref">Historie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a id="home_ref" class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery_ref">Galerie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts_ref">Kontakty</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <section class="container-fluid" id="main_page">
+        <div class="container-fluid" id="main_page_content">
+            <h3 class="display-5">
+                Vítejte na stránkách hotelu Les&nbsp;Créoles
+            </h3>
+            <div class="row">
+                <div class="col-lg-10 offset-lg-1">
+                    <form>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="firstname" class="form-label">Jméno</label>
+                                    <input type="text" class="form-control" id="firstname" placeholder="Vaše jméno">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="surname" class="form-label">Příjmení</label>
+                                    <input type="text" class="form-control" id="surname" placeholder="Vaše příjmení">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon1">@</span>
+                                        <input type="email" class="form-control" id="email"
+                                            aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="phone" class="form-label">Telefon</label>
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="phone_icon"><i
+                                                class="bi bi-telephone"></i></span>
+                                        <input type="text" class="form-control" id="phone" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="row mb-1">
+                                <div class="col-sm-6">
+                                    <label for="persons" class="form-label">Počet ubytovaných</label>
+                                    <select class="form-select" aria-label="Default select example" id="persons">
+                                        <option selected>Vybrat počet</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="rooms" class="form-label">Typ ubytování</label>
+                                    <select class="form-select" aria-label="Default select example" id="rooms">
+                                        <option selected>Vybrat počet</option>
+                                        <option value="1">Jednolůžkový pokoj</option>
+                                        <option value="2">Dvoulůžkový pokoj</option>
+                                        <option value="3">Třílůžkový pokoj</option>
+                                        <option value="4">Čtyřlůžkový pokoj</option>
+                                        <option value="5">Apartmán 3-lůžkový</option>
+                                        <option value="6">Apartmán 4-lůžkový</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="bed">
+                                <label class="form-check-label" for="bed">Přistýlka</label>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label for="arrive" class="form-label">Datum příjezdu</label>
+                                    <input type="date" class="form-control" id="arrive" placeholder="dd.mm.yyy">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label for="depart" class="form-label">Datum odjezdu</label>
+                                    <input type="date" class="form-control" id="depart" placeholder="dd.mm.yyy">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-primary btn-lg">Rezervovat</button>
+                            <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#video">Video
+                                prohlídka</button>
+                        </div>
+                    </form>
+<!-- --- modal --- -->
+                    <div class="modal fade" tabindex="-1" id="video" role="dialog">
+                        <div class="modal-dialog modal-xl modal-dialog-centered">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Video from youtube</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body d-flex justify-content-center">
+                                    <iframe class="embed-responsive-item"
+                                        src="https://www.youtube.com/embed/MDL_es7nqwc?autoplay=1"
+                                        title="Hôtel Les Créoles - Réunion" frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        id="youtube"></iframe>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary"
+                                        data-bs-dismiss="modal">Zavřít</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="space_home_price"></div>
+    <div class="div_section_ref"><span id="prices_ref" class="section_ref"></span></div>
+    <section class="container-fluid px-1 px-lg-3" id="prices_page">
+        <div class="row px-md-2 px-xl-1">
+            <div class="col-sm-6 col-lg-5 offset-lg-1 col-xl-3 offset-xl-0 py-2 px-md-5 px-lg-3 px-xl-1">
+                <div class="card">
+                    <img src="images/two_beds.jpg" class="card-img-top" alt="two beds">
+                    <div class="card-body">
+                        <h4 class="card-title">Dvoulůžkový pokoj</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Počet nocí</th>
+                                    <th scope="col">Jedna osoba</th>
+                                    <th scope="col">Více osob</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Jedna noc</th>
+                                    <td>120 €</td>
+                                    <td>105 €</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Více nocí</th>
+                                    <td>110 €</td>
+                                    <td>95 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-primary">Objednat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-5 col-xl-3 py-2 px-md-5 px-lg-3 px-xl-1">
+                <div class="card">
+                    <img src="images/three_beds.jpg" class="card-img-top" alt="three beds">
+                    <div class="card-body">
+                        <h4 class="card-title">Třílůžkový pokoj</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Počet nocí</th>
+                                    <th scope="col">Jedna osoba</th>
+                                    <th scope="col">Více osob</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Jedna noc</th>
+                                    <td>120 €</td>
+                                    <td>105 €</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Více nocí</th>
+                                    <td>110 €</td>
+                                    <td>95 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-primary">Objednat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-5 offset-lg-1 col-xl-3 offset-xl-0 py-2 px-md-5 px-lg-3 px-xl-1">
+                <div class="card">
+                    <img src="images/four_beds.jpg" class="card-img-top" alt="four bed">
+                    <div class="card-body">
+                        <h4 class="card-title">Čtyřlůžkový pokoj</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Počet nocí</th>
+                                    <th scope="col">Jedna osoba</th>
+                                    <th scope="col">Více osob</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Jedna noc</th>
+                                    <td>120 €</td>
+                                    <td>105 €</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Více nocí</th>
+                                    <td>110 €</td>
+                                    <td>95 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-primary">Objednat</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-5 col-xl-3 py-2 px-md-5 px-lg-3 px-xl-1">
+                <div class="card">
+                    <img src="images/apartment.jpg" class="card-img-top" alt="apartment">
+                    <div class="card-body">
+                        <h4 class="card-title">Dvoulůžkový apartmán</h4>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Počet nocí</th>
+                                    <th scope="col">Jedna osoba</th>
+                                    <th scope="col">Více osob</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Jedna noc</th>
+                                    <td>120 €</td>
+                                    <td>105 €</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Více nocí</th>
+                                    <td>110 €</td>
+                                    <td>95 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <a href="#" class="btn btn-primary">Objednat</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>    
+    <div class="space_price_history"></div>
+    <div class="div_section_ref"><span id="history_ref" class="section_ref"></span></div>    
+    <section class="container-fluid" id="history_page">
+        <div><h3>Something about our history</h3></div>
+        <div class="row g-3">
+            <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2 col-lg-4 offset-lg-0 d-flex align-items-center">
+                <img src="images/pohled.jpg" alt="view">
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <h4>First accommodation</h4>
+                <p class="left_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure laboriosam aut eaque
+                    maxime natus sunt ipsum labore omnis, totam veritatis eius libero officiis illo voluptas facilis
+                    velit tenetur praesentium quae recusandae culpa. Asperiores atque ratione perferendis reiciendis
+                    fugit, pariatur blanditiis labore maxime quaerat laudantium odit.</p>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <h4>Hotel's founder</h4>
+                <p class="right_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ratione animi ut
+                    non amet obcaecati suscipit totam facilis, placeat consequuntur nihil quis praesentium quibusdam
+                    culpa quod necessitatibus eligendi iusto ea maiores ex? Eum, alias? Necessitatibus voluptate enim
+                    voluptates, dolorem incidunt architecto atque assumenda temporibus inventore?</p>
+            </div>
+        </div>
+    </section>
+    <div class="div_section_ref"> <span id="gallery_ref" class="section_ref"></span></div>
+    <section id="gallery_page">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                    <img src="images/apartment.jpg" class="d-block w-100" alt="apartman">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Apartment</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item active">
+                    <img src="images/pexels-pixabay-37403.jpg" class="d-block w-100" alt="sea">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Prostředí</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="images/pohled.jpg" class="d-block w-100" alt="hotel">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>Okolí hotelu</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+    <div class="space_gallery_contacts"></div>
+    <div class="div_section_ref"> <span id="contacts_ref" class="section_ref"></span></div>
+    <section class="container-fluid" id="contacts_page">        
+        <div class="row" id="contacts_content">
+            <div class="col-md-6">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.152538642437!2d55.22107401430545!3d-21.066568980091994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21829226569d3bd1%3A0x43d6cf0357e5f85b!2zSMO0dGVsIExlcyBDcsOpb2xlcw!5e0!3m2!1scs!2scz!4v1654095146512!5m2!1scs!2scz"
+                    style="border:0;width: 100%;height: 100%;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <div class="col-md-3 text-center" id="refs_icons">
+                <a href="https://facebook.com" data-bs-toggle="tooltip" data-bs-placement="top" title="Our facebook"
+                    target="_blank">
+                    <i class="bi bi-facebook"></i>
+                </a>
+                <a href="https://twitter.com/" data-bs-toggle="tooltip" data-bs-placement="top" title="Our twitter"
+                    target="_blank">
+                    <i class="bi bi-twitter"></i>
+                </a>
+                <a href="https://www.instagram.com" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="We are on instagram" target="_blank">
+                    <i class="bi bi-instagram"></i>
+                </a>
+            </div>
+            <div class="col-md-3">
+                <div class="row">
+                    <div class="col-1"><i class="bi bi-geo-alt-fill"></i></div>
+                    <div class="col-11"> 43 Av. de Bourbon</div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-11"> St Paul 97434</div>
+                </div>
+                <div class="row">
+                    <div class="col-1"></div>
+                    <div class="col-11">
+                        <p> Réunion</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><i class="bi bi-telephone"></i></div>
+                    <div class="col-11">
+                        <p> +262262265265</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-1"><i class="bi bi-envelope-open"></i></div>
+                    <div class="col-11">
+                        <p> resa@hotellescreoles.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        const navLinks = document.querySelectorAll('.nav-item');
+        const menuToggle = document.getElementById('navbarNav');
+        if (window.screenY < 576) {
+            const bsCollapse = new bootstrap.Collapse(menuToggle, { toggle: false });
+            navLinks.forEach((l) => {
+                l.addEventListener('click', () => { bsCollapse.toggle() });
+            });
+        }
+
+        const video = document.querySelector('#youtube');
+        const videoUrl = video.getAttribute('src');
+        const modal=document.querySelector('#video');
+        modal.addEventListener('hide.bs.modal',function(){
+            video.setAttribute('src', '');
+        });
+        modal.addEventListener('show.bs.modal',function(){
+            video.setAttribute('src',videoUrl);
+        });                        
+       
+    </script>
+</body>
+
+</html>
